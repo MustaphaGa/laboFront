@@ -1,0 +1,71 @@
+<!--<div class="container my-container">
+<div class="card row justify-content-md-center" >
+  <div class="card-header text-center">
+    <h2>Login</h2>
+  </div>
+  <div class="card-body">
+    <div class="alert alert-danger" *ngIf="errorMessage">
+      {{errorMessage}}
+
+    </div>
+    <div class="mb-3">
+      <input type="email" class="form-control"  placeholder="E-mail" [(ngModel)]="authenticationRequest.login" >
+    </div>
+    <div class="mb-3">
+      <input type="password" class="form-control"  placeholder="mot de pass" [(ngModel)]="authenticationRequest.password">
+    </div>
+    <div class="mb-3 d-flex justify-content-between">
+      <a [routerLink]="['/register']" class="btn btn-link">s'inscrire</a>
+      <button type="button" class="btn btn-primary" (click)="login()">
+        <i class="fas fa-check"></i>&nbsp;se connecter</button>
+
+    </div>
+  </div>
+</div>
+</div> -->
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Login Form Design | CodeLab</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+<div class="wrapper" >
+  <div class="title">
+    Login Form
+  </div>
+  <div class="card-body">
+    <div class="alert alert-danger" *ngIf="errorMessage">
+      {{errorMessage}}
+
+    </div>
+  </div>
+  <form action="#">
+    <div class="field">
+      <input type="email"  name="email" [(ngModel)]="authenticationRequest.login">
+      <label>Email Address</label>
+    </div>
+    <div class="field">
+      <input type="password" name="password" [(ngModel)]="authenticationRequest.password">
+      <label>Password</label>
+    </div>
+    <div class="content">
+      <div class="checkbox">
+        <input type="checkbox" id="remember-me">
+        <label for="remember-me">Remember me</label>
+      </div>
+      <div class="pass-link">
+        <a href="pagAccPrincp">Forgot password?</a>
+      </div>
+    </div>
+
+    <div class="field">
+      <input type="submit" value="Login" (click)="login()">
+    </div>
+
+  </form>
+</div>
+</body>
+</html>

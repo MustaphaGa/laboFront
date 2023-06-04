@@ -1,0 +1,21 @@
+<div style="border: black;">
+    <button (click)="exportexcel()">Export to Excel</button>
+   
+    <table class="table table-hover" id="excel-table">
+        <thead class="thead-dark"></thead>
+      <tr>
+        <th scope="col">DESCRIPTION</th>
+        <th scope="col">MONTANT</th>
+        <th scope="col">DATE FACTURE</th>
+      </tr>
+      <tr *ngFor="let item of listefacture"
+      [factureDTo]="item">
+        <td scope ="row">{{item.analyseMedical?.descriprtion}}</td>
+        <td scope ="row">{{item.montant}}</td>
+        <td scope ="row">{{item.dateFacture}}</td>
+      </tr>
+    
+    </table>
+  </div>
+
+

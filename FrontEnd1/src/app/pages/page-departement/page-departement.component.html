@@ -1,0 +1,31 @@
+<div class="col">
+    <div class="row m-3 mr-2 ">
+        <div class="col-md-6 p-0">
+        <h1>liste departements</h1>
+        </div>
+        <div class="col-md-6 text-right">
+            <app-boutton-action
+            (clickEvent)="nouveauDepartement()"
+
+            ></app-boutton-action>
+        </div>
+    </div>
+    <div class="col m-3">
+            <div class="row col-md-12 alert alert-danger" *ngIf="errorMsgs">
+              {{ errorMsgs }}
+            </div>
+            <div class="row col-md-12 custom-border mb-3 p-3" *ngFor="let departemnt of listeDepartement">
+              <div class="col-md-3 custom-border-right">
+                {{departemnt.nomDepartement}}
+              </div>
+    </div>
+    </div>
+    <div class="row mb-3" >
+        <div class="col md-12 text-center">
+<app-pagination></app-pagination>
+</div>
+    </div>
+
+
+
+

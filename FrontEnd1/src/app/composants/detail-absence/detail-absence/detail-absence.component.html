@@ -1,0 +1,31 @@
+<!--detaill-->
+<h3 style="text-align: center;margin-bottom: 25px;">  Details Resultat </h3>
+<div style="margin-left: 20px;
+margin-right: auto;
+">
+
+   
+  <div>
+    <label> <b> DATE DEBUT: </b></label> {{absenceDt.dateDebut | date: 'dd/MM/yyyy'}}
+</div>
+<div>
+    <label> <b> DATE FIN: </b></label> {{absenceDt.dateFin | date: 'dd/MM/yyyy'}}
+</div>
+  <div>
+      <label> <b> JUSTIFIE: </b></label> {{absenceDt.justifie}}
+  </div>
+  <div>
+    <label> <b> MOTIF: </b></label> {{absenceDt.motif}}
+</div>
+  <div>
+      <label> <b> PIECES FOURNIS: </b></label> {{absenceDt.pieceJustificatifString}}
+  </div>
+  <div>
+    <label> <b> EMPLOYE : </b></label> {{absenceDt.employe?.nom}} {{absenceDt.employe?.prenom}}
+</div>
+ 
+</div>
+    
+
+
+

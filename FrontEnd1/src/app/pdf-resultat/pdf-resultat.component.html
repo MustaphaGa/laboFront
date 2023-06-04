@@ -1,0 +1,59 @@
+<!--detaill-->
+<h3 style="text-align: center;margin-bottom: 25px;">  Details Patient </h3>
+<div style="margin-left: 20px;
+margin-right: auto;
+">
+
+  <div>
+      <label> <b> CODE Patient: </b></label> {{patientDt.codePatient}}
+  </div>
+  <div>
+      <label> <b> NOM: </b></label> {{patientDt.nom}}
+  </div>
+  <div>
+      <label> <b> PRENOM: </b></label> {{patientDt.prenom}}
+  </div>
+  <div>
+      <label> <b> EMAIL: </b></label> {{patientDt.email}}
+  </div>
+  <div>
+      <label> <b> CIN: </b></label> {{patientDt.cni}}
+  </div>
+  <div>
+      <label> <b> SEXE: </b></label> {{patientDt.sexe}}
+  </div>
+  <div>
+    <label> <b> DATE NAISSANCE: </b></label> {{patientDt.dateNaissance | date: 'dd/MM/yyyy'}}
+</div>
+  <div>
+      <label> <b> ADRESSE: </b></label> {{patientDt.adressse}}
+  </div>
+  <div>
+      <label> <b> TELEPHONE: </b></label> {{patientDt.telephone}}
+  </div>
+  <div>
+    <label> <b> NOM ET PRENOM BIOLOGISTE: </b></label> {{detailResultatDT.biologiste?.nom}} {{detailResultatDT.biologiste?.prenom}}
+</div>
+<div>
+    <label> <b> DATE ANALYSE: </b></label> {{detailResultatDT.analyseMedical?.dateAnalyse | date: 'dd/MM/yyyy'}}
+</div>
+<div>
+    <label> <b> VALEUR1: </b></label> {{detailResultatDT.valeur1}} -
+    <label> <b> VALEUR2: </b></label> {{detailResultatDT.valeur2}} -
+    <label> <b> VALEUR3: </b></label> {{detailResultatDT.valeur3}} -
+    <label> <b> VALEUR4: </b></label> {{detailResultatDT.valeur4}} -
+    <label> <b> VALEUR5: </b></label> {{detailResultatDT.valeur5}}
+</div>
+<div>
+    <label> <b> VALEUR6: </b></label> {{detailResultatDT.valeur6}} -
+    <label> <b> VALEUR7: </b></label> {{detailResultatDT.valeur7}} -
+    <label> <b> VALEUR8: </b></label> {{detailResultatDT.valeur8}} -
+    <label> <b> VALEUR9: </b></label> {{detailResultatDT.valeur9}} -
+    <label> <b> VALEUR10: </b></label> {{detailResultatDT.valeur10}}
+</div>
+<button (click)="generatePdf()" class = "btn btn-info" style="margin-left: 10px"> export pdf </button>
+</div>
+    
+
+
+

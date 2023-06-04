@@ -1,0 +1,95 @@
+<div class="col">
+    <div class="col-md-12 mb-3 mt-3">
+        <img src="assets/menu/assets/img/detail resultat.jpg"  class="rounded-circle" width="200px" height="200px">
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-12">
+            <h3><i class="fas fa-info-circle blue-color"></i>&nbsp;Information pour resultat</h3>
+        </div>
+        <div class="col-md-12">
+          <div class="alert alert-danger" *ngIf="errorMsg.length > 0">
+            <div *ngFor="let msg of errorMsg">
+              <span >{{msg}}</span>
+            </div>
+          </div>
+            <form>
+                <div class="row">
+                  <div class="col mb-3">
+                    <div class="row">
+                      <div class="col mb-3">
+                        <input type="text" class="form-control" placeholder="valeur1" name="valeurAnalys" [(ngModel)]="detailResultatDTO.valeur1">
+                      </div>
+                      <div class="col mb-3">
+                        <input type="text" class="form-control" placeholder="valeur2" name="valeurAnalys" [(ngModel)]="detailResultatDTO.valeur2">
+                      </div>
+                        <div class="col mb-3">
+                        <input type="text" class="form-control" placeholder="valeur3" name="valeurAnalys" [(ngModel)]="detailResultatDTO.valeur3">
+                        </div>
+                        <div class="col mb-3">
+                        <input type="text" class="form-control" placeholder="valeur4" name="valeurAnalys" [(ngModel)]="detailResultatDTO.valeur4">
+                      </div>
+                      <div class="col mb-3">
+                        <input type="text" class="form-control" placeholder="valeur5" name="valeurAnalys" [(ngModel)]="detailResultatDTO.valeur5">
+                      </div>
+                      </div>
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col mb-3">
+                    <input type="text" class="form-control" placeholder="valeur6" name="valeurAnalys" [(ngModel)]="detailResultatDTO.valeur6">
+                  </div>
+                  <div class="col mb-3">
+                    <input type="text" class="form-control" placeholder="valeur7" name="valeurAnalys" [(ngModel)]="detailResultatDTO.valeur7">
+                  </div>
+                    <div class="col mb-3">
+                    <input type="text" class="form-control" placeholder="valeur8" name="valeurAnalys" [(ngModel)]="detailResultatDTO.valeur8">
+                    </div>
+                    <div class="col mb-3">
+                    <input type="text" class="form-control" placeholder="valeur9" name="valeurAnalys" [(ngModel)]="detailResultatDTO.valeur9">
+                  </div>
+                  <div class="col mb-3">
+                    <input type="text" class="form-control" placeholder="valeur10" name="valeurAnalys" [(ngModel)]="detailResultatDTO.valeur10">
+                  </div>
+                  </div>
+                  <div class="row">
+                    <div >
+                      <label for="exmple">Description Analyse</label>
+                    </div>
+                  <div class="col mb-3">
+                    <select class="form-control" name="reslt" [(ngModel)]="analyseMedicalDto.idAnalyse">
+                        <option *ngFor="let reslt of listeAnalyse" [value]="reslt.idAnalyse">{{reslt.dateAnalyse |  date: 'dd/MM/yyyy'}} </option>
+                                      
+                        
+                      </select>
+                  </div>
+                  <div >
+                    <label for="exmple">Biologiste</label>
+                  </div>
+                  <div class="col">
+                   
+                    <select class="form-control "   name="bgt" [(ngModel)]="biologisteDTo.idBiologiste"> 
+                      <option></option>
+                     <option *ngFor="let bgt of listeBiologist" [value]="bgt.idBiologiste">{{bgt.nom}} -{{bgt.prenom}}  </option>                
+                    </select>
+                </div>
+                </div>
+              </form>
+            
+        </div>
+    </div>
+    <div class="col-md-12 text-right">
+        <button class="btn btn-danger mr-3" (click)="cancel()">
+          <i class="fas fa-ban"></i>&nbsp;
+          Annuler
+        </button>
+        <button class="btn btn-primary" (click)="enregistrerAnalyse()" >
+          <i class="fas fa-save"></i>&nbsp;
+          Enregitrer
+        </button>
+      </div>
+</div>
+
+
+
+
+

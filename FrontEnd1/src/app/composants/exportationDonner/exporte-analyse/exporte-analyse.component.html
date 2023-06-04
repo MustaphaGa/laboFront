@@ -1,0 +1,27 @@
+<div style="border: black;">
+    <button (click)="exportexcel()">Export to Excel</button>
+   
+    <table class="table table-hover" id="excel-table">
+        <thead class="thead-dark"></thead>
+      <tr>
+        <th scope="col">DATE ANALYSE </th>
+        <th scope="col">PRIX ANALYSE</th>
+        <th scope="col">DESCRIPTION</th>
+        <th scope="col">RESULTAT</th>
+        <th scope="col">TYPE ANALYSE</th>
+        <th scope="col">DATE RESERVATION</th>
+      </tr>
+      <tr *ngFor="let item of listeAnalyse"
+      [analyseMedicalDt]="item">
+        <td scope ="row">{{item.dateAnalyse}}</td>
+        <td scope ="row">{{item.prixAnalyse}}</td>
+        <td scope ="row">{{item.descriprtion}}</td>
+        <td scope ="row">{{item.resultat}}</td>
+        <td scope ="row">{{item.typeAnalyse?.typeAnalyse}}</td>
+        <td scope ="row">{{item.reservation?.dateReservation}}</td>
+       
+      </tr>
+    
+    </table>
+  </div>
+

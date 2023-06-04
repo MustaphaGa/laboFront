@@ -1,0 +1,28 @@
+<div class="col">
+    <div class="row m-3 mr-2 ">
+        <div class="col-md-6 p-0">
+        <h1>liste des biologistes</h1>
+        </div>
+        <div class="col-md-6 text-right">
+            <app-boutton-action
+                (clickEvent)="nouveauBiologist()"
+                ></app-boutton-action>
+        </div>
+    </div>
+    <div class="col m-3">
+        <div class="row col-md-12 alert alert-danger" *ngIf="errorMsgs">
+            {{ errorMsgs }}
+          </div>
+     <app-detail-biologiste
+     *ngFor="let biologist of listeBiologist"
+     [biologisteDt]="biologist"
+     (suppressionBiologist)="handleSuppression($event)"
+     ></app-detail-biologiste>    
+    </div>
+    <div class="row mb-3">
+        <div class="col md-12 text-center">
+<app-pagination></app-pagination>
+</div>
+    </div>
+
+</div>

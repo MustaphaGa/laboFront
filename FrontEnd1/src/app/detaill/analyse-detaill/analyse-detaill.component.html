@@ -1,0 +1,31 @@
+<!--detaill-->
+<h3 style="text-align: center;margin-bottom: 25px;">  Details Analyse Medical </h3>
+<div style="margin-left: 20px;
+margin-right: auto;
+">
+  <div>
+      <label> <b> DATE ANALYSE: </b></label> {{analyseMedicalDto.dateAnalyse | date : 'dd/MM/yyyy'}}
+  </div>
+  <div>
+      <label> <b> PRIX: </b></label> {{analyseMedicalDto.prixAnalyse}} DH
+  </div>
+  <div>
+      <label> <b> DESCRIPTION: </b></label> {{analyseMedicalDto.descriprtion}}
+  </div>
+  <div>
+      <label> <b> RESULTAT: </b></label> {{analyseMedicalDto.resultat}}
+  </div>
+  <div>
+      <label> <b>DESCRIPTION D'ANALYSE: </b></label> {{analyseMedicalDto.descriprtion}}
+  </div>
+  <div>
+      <label> <b> TYPE ANALYSE: </b></label> {{analyseMedicalDto.typeAnalyse?.typeAnalyse}}
+  </div>
+  <div>
+    <label> <b> DATE RESERVATION: </b></label> {{analyseMedicalDto.reservation?.dateReservation | date : 'dd/MM/yyyy'}}
+</div>
+</div>
+
+
+
+

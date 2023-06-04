@@ -1,0 +1,66 @@
+<div class="col">
+    <div class="col-md-12 mb-3 mt-3">
+        <img src="assets/menu/assets/img/Infirmieres.jpg"  class="rounded-circle" width="200px" height="200px">
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-12">
+            <h3><i class="fas fa-info-circle blue-color"></i>&nbsp;Information D'un Preleveur</h3>
+        </div>
+        <div class="col-md-12">
+          <div class="alert alert-danger" *ngIf="errorMsg.length > 0">
+            <div *ngFor="let msg of errorMsg">
+              <span >{{msg}}</span>
+            </div>
+          </div>
+            <form>
+                <div class="row ">
+                  <div class="col  mb-3  ">
+                    <input type="text" class="form-control" placeholder="nom" name="nomPrelev" [(ngModel)]="preleveurDto.nom">
+                  </div>
+                  <div class="col mb-3">
+                    <input type="text" class="form-control" placeholder="specialite" name="specialite" [(ngModel)]="preleveurDto.specialite">
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col mb-3">
+                    <input type="text" class="form-control" placeholder="prenom" name="prenomPreleve" [(ngModel)]="preleveurDto.prenom">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="telephone" name="telePrelev" [(ngModel)]="preleveurDto.telephone">
+                  </div>
+                  <div class="col">
+                  <input type="email" class="form-control"  placeholder="E-mail" name="emailPreleve" [(ngModel)]="preleveurDto.email">
+                </div>
+                  </div>
+                  <div class="row">
+                  <div class="col mb-3">
+                    <input type="text" class="form-control" placeholder="sexe" name="sexePreleve" [(ngModel)]="preleveurDto.sexe">
+                  </div>
+                
+                  <div class="col">
+                    <select class="form-control" name="analys" [(ngModel)]="analyseMedicalDt.idAnalyse">
+                      <option *ngFor="let analys of listeAnalyse" [value]="analys.idAnalyse">{{analys.descriprtion}} </option>              
+                      
+                    </select>
+                  </div>
+                </div>
+              </form>
+        </div>
+    </div>
+    <div class="col-md-12 text-right">
+        <button class="btn btn-danger mr-3" (click)="cancel()">
+          <i class="fas fa-ban"></i>&nbsp;
+          Annuler
+        </button>
+        <button class="btn btn-primary"(click)="enregistrerPreleveur()" >
+          <i class="fas fa-save"></i>&nbsp;
+          Enregitrer
+        </button>
+      </div>
+</div>
+
+
+
+
+
+

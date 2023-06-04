@@ -1,0 +1,33 @@
+<div class="col">
+    <div class="row m-3 mr-2 ">
+        <div class="col-md-6 p-0">
+        <h1>liste des absences</h1>
+        </div>
+        <div class="col-md-6 text-right">
+            <app-boutton-action
+            (clickEvent)="nouveauAbsence()"
+            (clickEvent1)="exporteAbsence()"
+            ></app-boutton-action>
+            <div class="row col-md-12 alert alert-danger" *ngIf="errorMsgs">
+                {{ errorMsgs }}
+              </div>
+        </div>
+    </div>
+    <div class="col m-3">
+        <app-absence-detaill 
+        *ngFor="let absence of listeabsence"
+        [absencedto]="absence"
+        (suppressionAbsence)="handleSuppression($event)"
+
+        ></app-absence-detaill >
+    </div>
+    </div>
+    <div class="row mb-3" >
+        <div class="col md-12 text-center">
+<app-pagination></app-pagination>
+</div>
+    </div>
+
+
+
+

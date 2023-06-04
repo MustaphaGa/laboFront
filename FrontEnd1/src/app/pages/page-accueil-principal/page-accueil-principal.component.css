@@ -1,0 +1,106 @@
+body{
+  align-items: center;
+  /*background-image: url("src/assets/img/labo.jpg"); */
+  background-size: cover;
+
+}
+header {
+    width: 100%;
+    height: 600 px;
+    text-align:right;
+    background-color: #abbaba;
+    color: #000;
+  }
+
+li{
+    display : inline;
+    padding: 8px;
+
+}
+h1 {
+    text-align: center;
+    color: #777;
+
+  }
+  footer{
+
+  text-align:center;
+  padding: 4px;
+  background-color: #abbaba;
+  color: #000;
+  }
+
+
+  .conteneur{
+    overflow: hidden;
+    margin: 10px auto;
+    box-shadow: 0px 15px 10px -5px #777;
+  
+
+
+}
+/*
+.khalid{
+    width: 1000px;
+    height:500px;
+    background-color: #EDEDED;
+    background-image: url("src/assets/imgs/labo.jpg");
+    background-size: contain;
+     animation: defilement1 10s linear infinite;
+}
+ @keyframes defilement1{
+    0%{transform: translate(0,0);}
+    100%{transform: translate(-2000px,0);}
+}
+ */
+
+ .kha h1{
+  font-family: "Sofia", sans-serif;
+ }
+
+
+
+/*
+ div.gallery {
+  border: 1px solid #06fc12;
+}
+
+div.gallery:hover {
+  border: 1px solid #f70606;
+}
+
+div.gallery img {
+  width: 350px;
+  height: 200px;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+} */

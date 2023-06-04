@@ -1,0 +1,30 @@
+<div class="col">
+  <div class="row m-3 mr-2 ">
+      <div class="col-md-6 p-0">
+      <h1>liste des employees</h1>
+      </div>
+      <div class="col-md-6 text-right">
+          <app-boutton-action
+          (clickEvent)="nouveauEmploye()"
+          (clickEvent1)="exporteEmploye()"
+          ></app-boutton-action>
+          
+      </div>
+  </div>
+  <div class="col m-3">
+         <app-detail-employe 
+         *ngFor="let employe of listeEmploye"
+     [employedto]="employe"
+     (suppressionEmploye)="handleSuppression($event)"
+
+         ></app-detail-employe>
+  </div>
+  </div>
+  <div class="row mb-3" >
+      <div class="col md-12 text-center">
+<app-pagination></app-pagination>
+</div>
+  </div>
+
+
+

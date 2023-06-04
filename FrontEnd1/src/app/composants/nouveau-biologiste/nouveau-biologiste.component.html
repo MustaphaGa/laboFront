@@ -1,0 +1,64 @@
+<div class="col">
+    <div class="col-md-12 mb-3 mt-3">
+        <img src="assets/menu/assets/img/images.jfif"  class="rounded-circle" width="200px" height="200px">
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-12">
+            <h3><i class="fas fa-info-circle blue-color"></i>&nbsp;Information D'un Biologiste</h3>
+        </div>
+        <div class="col-md-12">
+            <form>
+                <div class="row">
+                  <div class="col mb-3">
+                    <input type="text" class="form-control" placeholder="code biologiste" name="codeBio" [(ngModel)]="biologisteDto.codeBiologiste">
+                  
+                  </div>
+                  <div class="col ">
+                    <input type="text" class="form-control" placeholder="nom" name="nomBio" [(ngModel)]="biologisteDto.nom">
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col mb-3">
+                    <input type="text" class="form-control" placeholder="prenom" name="prenomBio" [(ngModel)]="biologisteDto.prenom">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="email" name="emailBio" [(ngModel)]="biologisteDto.email">
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col mb-3">
+                    <input type="text" class="form-control" placeholder="sexe" name="sexeBio" [(ngModel)]="biologisteDto.sexe">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="service" name="seviceBio" [(ngModel)]="biologisteDto.service">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Telephone"  name="teleBio" [(ngModel)]="biologisteDto.telephone">
+                  </div>
+                  <div class="col">
+                      <select class="form-control" name="det" [(ngModel)]="departementDT.idDepartement">
+                        <option *ngFor="let det of listeDepartement" [value]="det.idDepartement">{{det.nomDepartement}}  </option>              
+                        
+        
+                      </select>
+                  </div>
+                </div>
+              </form>
+        </div>
+    </div>
+    <div class="col-md-12 text-right">
+        <button class="btn btn-danger mr-3" (click)="cancel()">
+          <i class="fas fa-ban"></i>&nbsp;
+          Annuler
+        </button>
+        <button class="btn btn-primary" (click)="enregistrerBiologistee()">
+          <i class="fas fa-save"></i>&nbsp;
+          Enregitrer
+        </button>
+      </div>
+</div>
+
+
+
+
+

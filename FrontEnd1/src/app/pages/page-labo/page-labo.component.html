@@ -1,0 +1,38 @@
+<div class="col">
+    <div class="row m-3 mr-2">
+         <div class="col-md-6 p-0">
+         <h1>liste des labo</h1>
+         </div>
+      <div class="col-md-6 text-right">
+        <app-boutton-action (clickEvent)="nouveauLabo()">
+        </app-boutton-action>
+        <div class="row col-md-12 alert alert-danger"
+         *ngIf="errorMsgs">
+          {{ errorMsgs }}
+        </div>
+      </div>
+    </div>
+    <div class="col m-3">
+      <app-labo-detaill
+        *ngFor="let labo of listeLabo"
+        [labodto]="labo"
+        (suppressionLabo)="handleSuppression($event)"
+      ></app-labo-detaill>
+    </div>
+  
+  <div class="row mb-3">
+    <div class="col md-12 text-center">
+      <app-pagination></app-pagination>
+    </div>
+  </div>
+  </div>
+  
+
+
+
+
+
+
+
+
+
